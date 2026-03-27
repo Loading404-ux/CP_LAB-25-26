@@ -8,7 +8,7 @@ void main()
   printf("Enter the array size: ");
   scanf("%d",&n);
   m=(int *)malloc(n*sizeof(int));
-  c=(int*)calloc(n,sizeof(int));
+  c=(int *)calloc(n,sizeof(int));
   if(m==NULL)
   printf("Memory failed to allocated using malloc.\n");
   else

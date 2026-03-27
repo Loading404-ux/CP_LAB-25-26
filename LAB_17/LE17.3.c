@@ -2,9 +2,25 @@
 
 int row,col;
 
-void transpose(int ptr[row][col],int row)
+void transpose(int *ptr[row][col])
 {
-  
+  int *trans[row][col];
+  for(int i=0;i<row;i++)
+  {
+   for(int j=0;j<col;j++)
+   {
+     trans[i][j]=ptr[j][i];
+   }
+  }
+  printf("Transpose of given Matrix:\n");
+  for(int i=0;i<row;i++)
+  {
+   for(int j=0;j<col;j++)
+   {
+     printf("%d ",**(*(trans+i)+j));
+   }
+   printf("\n");
+  }
 }
 void main()
 {
@@ -24,5 +40,5 @@ void main()
      ptr[i][j]=&a[i][j];
    }
   }
-  transpose(ptr[row][col],row);
+  transpose(ptr);
 }
