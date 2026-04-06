@@ -41,9 +41,7 @@ int main() {
     printf("Name Gender Designation Department Basic Pay Gross Pay\n");
 
     for(int i=0; i<n; i++) {
-        printf("%s %c %s %s %.0f %.0f\n",
-        e[i].name, e[i].gender, e[i].desig,
-        e[i].dept, e[i].basic, e[i].gross);
+        printf("%s %c %s %s %.0f %.0f\n",e[i].name, e[i].gender, e[i].desig,e[i].dept, e[i].basic, e[i].gross);
     }
 
     free(e);
